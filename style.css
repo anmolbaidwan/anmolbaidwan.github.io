@@ -470,13 +470,43 @@ footer {
 }
 
 @media (max-width: 1024px) {
-    .project-demo-card {
-        grid-template-columns: 1fr;
-    }
     
+    .project-demo-card {
+        grid-template-columns: 1fr; 
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
     .video-container {
+        width: 100%;
+        aspect-ratio: 16 / 9; 
         border-right: none;
         border-bottom: 1px solid var(--border-tan);
-        height: 200px;
+    }
+
+    .video-container video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; 
+    }
+
+    .project-demo-details {
+        padding: 20px; 
+        text-align: left;
+    }
+
+    .tech-tags-tan {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title-neutral {
+        font-size: 2rem;
+    }
+    
+    .hero-neutral h1 {
+        font-size: 2.5rem;
     }
 }
